@@ -1,0 +1,17 @@
+<%- include ../layouts/cabezera.ejs %> 
+<form method="post" action="../actualizar/" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<%= libro.id %> ">
+    <div class="form-group">
+      <label for="">Nombre</label>
+      <input type="text" name="nombre"  class="form-control" value="<%= libro.nombre %> " aria-describedby="helpId">
+    </div>
+    <div class="form-group">
+      <label for="">Imagen</label>
+      <img class="img.thumbnail" src="../../images/<%= libro.imagen %>" width="100" alt="">
+
+      <input class="form-control-file" type="file" name="archivo">
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+<%- include ../layouts/pie.ejs %> 
